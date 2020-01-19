@@ -2152,7 +2152,7 @@ class TestNotify(TestCase):
         self.wf.save()
         r = notify_for_execute(self.wf)
         self.assertIsNone(r)
-        _msg_sender.assert_called_once()
+        _msg_sender.assert_called()
 
     @patch('sql.notify.MsgSender')
     def test_notify_for_binlog2sql_disable(self, _msg_sender):

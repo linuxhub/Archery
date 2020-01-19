@@ -723,7 +723,7 @@ class TestAudit(TestCase):
     def test_audit_add_wrong_type(self):
         """ 测试添加不存在的类型"""
         with self.assertRaisesMessage(Exception, '工单类型不存在'):
-            Audit.add(3, 1)
+            Audit.add(4, 1)
 
     def test_audit_add_settings_not_exists(self):
         """ 测试审批流程未配置"""
